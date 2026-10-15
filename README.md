@@ -11,3 +11,16 @@ naturaleza, con tolerancia `1e-6` y un tope de 100 iteraciones. El análisis com
 **Integrantes:** Blas Rojas Diaz, Joaquin Hernandeez Castro
 
 ---
+
+## 1. Estructura del proyecto
+
+```
+evaluacion2-busqueda-raices/
+├── README.md              <- este archivo
+├── requirements.txt       <- numpy, matplotlib
+├── informe.md             <- respuestas a las preguntas de convergencia y conclusión
+└── src/
+    ├── assets/            <- gráficos PNG generados automáticamente
+    ├── data/              <- CSV generados automáticamente
+    └── scripts/           <- scripts de Python
+```
