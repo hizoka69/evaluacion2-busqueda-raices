@@ -1,16 +1,3 @@
-"""
-verificacion.py
-===============
-Demuestra numéricamente que cada función tiene raíz dentro del rango:
-
-  * Funciones que cruzan el eje  -> Teorema de Bolzano: f continua en [a, b]
-    y f(a)·f(b) < 0  =>  existe al menos una raíz en (a, b). Además se
-    comprueba que f' no cambia de signo en [a, b] (f monótona => raíz única).
-
-  * Función con raíz doble (x-2)^2 -> tangencia al eje x: f(r) = 0, f'(r) = 0,
-    f''(r) > 0 y f(x) >= 0 en todo el rango (la curva toca el eje sin cruzarlo,
-    por lo que Bolzano NO es aplicable aunque la raíz exista).
-"""
 import numpy as np
 
 from funciones import Funcion
