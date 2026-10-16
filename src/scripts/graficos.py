@@ -74,7 +74,7 @@ def graficar_convergencia(func: Funcion, raiz: float, resultados, ruta: str) -> 
     ax.axhline(m.TOL, color="gray", ls=":", lw=1.2, label="tol = 1e-6")
     ax.set_title(f"Convergencia: {func.nombre}\n{func.expresion}")
     ax.set_xlabel("Iteración n")
-    ax.set_ylabel("|error| = |x_n − r|  (escala log)")
+    ax.set_ylabel("Error Absoluto")
     ax.set_ylim(bottom=1e-17)
     ax.grid(alpha=0.3, which="both")
     ax.legend(loc="upper right", fontsize=8)
