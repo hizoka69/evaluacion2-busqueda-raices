@@ -2,7 +2,7 @@
 
 Universidad Católica del Maule, Laboratorio Evaluado 2.
 
-Integrantes: Blas Rojas Díaz y Joaquín Hernández Castro.
+Integrantes: Blas Emilio Rojas Díaz y Joaquín Alonso Hernández Castro.
 
 ## Qué hace el proyecto
 
