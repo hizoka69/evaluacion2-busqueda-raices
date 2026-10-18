@@ -1,104 +1,64 @@
 # Evaluación 2 — La raíz que se esconde
 
-**Universidad Católica del Maule — Laboratorio Evaluado 2**
+Universidad Católica del Maule, Laboratorio Evaluado 2.
 
-**Unidad:** Iteración funcional para ecuaciones, búsqueda de raíces y análisis de convergencia.
+Integrantes: Blas Rojas Díaz y Joaquín Hernández Castro.
 
-**Integrantes:**
-- Blas Rojas Díaz
-- Joaquín Hernández Castro
+## Qué hace el proyecto
 
-## Descripción
+Implementa seis métodos de búsqueda de raíces (bisección, falsa posición, punto fijo, secante, Newton-Raphson y Newton mejorado) y los compara en seis funciones: polinómica, polinómica con raíz doble, logarítmica, exponencial, trigonométrica y mixta. La tolerancia es 1e-6 y el máximo es 100 iteraciones. Las conclusiones están en [informe.md](informe.md).
 
-Este proyecto implementa seis métodos numéricos para encontrar raíces de ecuaciones y comparar su convergencia en diferentes tipos de funciones.
-
-Los métodos utilizados son:
-
-1. Bisección
-2. Falsa posición
-3. Punto fijo
-4. Secante
-5. Newton-Raphson
-6. Newton-Raphson mejorado
-
-Se trabaja con una tolerancia de `1e-6` y un máximo de 100 iteraciones por método.
-
-También se generan gráficos, archivos CSV y un análisis de sensibilidad para comparar los resultados.
-
-## Estructura del proyecto
+## Estructura
 
 ```text
 evaluacion2-busqueda-raices/
 ├── README.md
 ├── requirements.txt
 ├── informe.md
-├── .gitignore
 └── src/
-    ├── scripts/
-    │   ├── main.py
-    │   ├── funciones.py
-    │   ├── verificacion.py
-    │   ├── metodos.py
-    │   ├── analisis.py
-    │   ├── graficos.py
-    │   └── sensibilidad.py
-    ├── assets/
-    └── data/
+    ├── scripts/   código Python
+    ├── data/      CSV generados
+    └── assets/    gráficos PNG generados
 ```
 
-La carpeta `scripts` contiene el código Python. En `assets` se guardan los gráficos y en `data` los resultados CSV.
+## Scripts (src/scripts/)
 
-## Requisitos
+- `main.py`: es el que se ejecuta. Corre todo y guarda los CSV y los gráficos.
+- `funciones.py`: define las seis funciones, sus derivadas, la g(x) del punto fijo, los intervalos y las estimaciones iniciales.
+- `verificacion.py`: comprueba que hay raíz (cambio de signo, o tangencia en la raíz doble).
+- `metodos.py`: los seis métodos.
+- `analisis.py`: ejecuta los métodos por función y calcula error y orden de convergencia.
+- `graficos.py`: genera los gráficos con matplotlib.
+- `sensibilidad.py`: prueba distintos intervalos y estimaciones iniciales (pregunta 5 del informe).
 
-- Python 3
-- Bibliotecas indicadas en `requirements.txt`
+## Cómo ejecutarlo
 
-## Instalación
-
-Primero, clonar el repositorio:
+Clonar el repositorio y crear el entorno virtual:
 
 ```bash
 git clone https://github.com/hizoka69/evaluacion2-busqueda-raices.git
 cd evaluacion2-busqueda-raices
-```
-
-Crear el entorno virtual:
-
-```bash
 python -m venv .venv
 ```
 
-Activarlo en Windows usando PowerShell:
+Activarlo:
 
-```powershell
+```bash
+# Windows (PowerShell)
 .\.venv\Scripts\Activate.ps1
+
+# Linux / macOS
+source .venv/bin/activate
 ```
 
-Instalar las dependencias:
+Instalar dependencias y ejecutar:
 
 ```bash
-python -m pip install -r requirements.txt
-```
-
-## Ejecución
-
-Desde la carpeta principal del proyecto, ejecutar:
-
-```bash
+pip install -r requirements.txt
 python src/scripts/main.py
 ```
 
-El programa realiza las verificaciones matemáticas, ejecuta los métodos numéricos y genera los archivos de resultados.
-
 ## Resultados
 
-Los archivos se guardan en las siguientes carpetas:
-
-- `src/data/`: resultados de los métodos, verificación de raíces y análisis de sensibilidad en formato CSV.
-- `src/assets/`: gráficos de las funciones, convergencia, iteraciones y sensibilidad.
-
-Los gráficos de convergencia utilizan una escala logarítmica para visualizar mejor la reducción del error absoluto.
-
-## Informe
-
-El desarrollo matemático, la comparación de los métodos y las conclusiones se encuentran en [informe.md](informe.md).
+- `src/data/`: un CSV `(x, f(x))` por función, `resumen_convergencia.csv`, `verificacion_raices.csv` y `sensibilidad.csv`.
+- `src/assets/`: gráfico de cada función con su raíz, gráfico de convergencia |error| vs iteración (escala log), `resumen_iteraciones.png` y los dos gráficos de sensibilidad.
