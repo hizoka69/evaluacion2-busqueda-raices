@@ -4,8 +4,8 @@
 Universidad Católica del Maule · Laboratorio evaluado 2
 
 **Integrantes:**
-- Blas Emilio Rojas Diaz
-- Joaquin Alonso Hernandez Castro
+- Blas Emilio Rojas Díaz
+- Joaquín Alonso Hernández Castro
 
 ---
 
